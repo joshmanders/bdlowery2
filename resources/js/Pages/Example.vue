@@ -4,10 +4,10 @@ import StepWizard from "@/Components/StepWizard.vue";
 </script>
 
 <template>
-    <AppLayout title="Dashboard">
+    <AppLayout title="Example">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Example
             </h2>
         </template>
 

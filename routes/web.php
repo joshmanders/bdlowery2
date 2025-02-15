@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\VerificationController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,4 +22,12 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::Get('/example', function () {
+        return Inertia::render('Example');
+    })->name('example');
+
+    Route::post('/verify/phone', [VerificationController::class, 'phone']);
+    Route::post('/verify/code', [VerificationController::class, 'code']);
+    Route::post('/verify/profile', [VerificationController::class, 'profile']);
 });
